@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4e8">
+  <meta name="description" content="A little world of comfort, memories, and love.">
+  <title>Count on Me, Love ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient-hearts" aria-hidden="true"><span>♡</span><span>✦</span><span>♡</span><span>✧</span><span>♡</span></div>
+
+  <section class="opening" id="opening" aria-labelledby="opening-title">
+    <div class="opening-card">
+      <div class="tiny-stars" aria-hidden="true">✦　♡　✦</div>
+      <div class="envelope-art" aria-hidden="true"><div class="envelope-heart">♡</div></div>
+      <p class="eyebrow">a little something, just for you</p>
+      <h1 id="opening-title">hey, love.<br><em>this little world is just for you.</em> ♡</h1>
+      <p class="opening-copy">for the days when you need a little comfort, a little happiness, and a reminder that someone cares about you.</p>
+      <button class="button button-primary" id="openSite">Open this, love ♡ <span aria-hidden="true">→</span></button>
+      <p class="small-note">take your time here. there's no rush.</p>
+    </div>
+  </section>
+
+  <div id="site" class="site-shell" hidden>
+    <header class="topbar">
+      <a class="brand" href="#hero" aria-label="Count on Me, Love, home">count on me, love <span>♡</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#comfort">little reminders</a><a href="#gallery">our memories</a><a href="#letter">love letter</a>
+      </nav>
+      <div class="music-player">
+        <button id="musicToggle" class="music-toggle" aria-label="Play background music" title="Play or pause music">▶</button>
+        <div class="music-meta"><strong>Count on Me</strong><small id="musicStatus">music is waiting ♡</small></div>
+        <label class="sr-only" for="volume">Music volume</label><input id="volume" type="range" min="0" max="1" step="0.05" value="0.45">
+        <audio id="backgroundMusic" preload="none" loop>
+          <source src="public/music/count-on-me.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section-pad" id="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">a safe little corner of the internet</p>
+          <h2>you don't have to face everything <em>alone, love.</em> ♡</h2>
+          <p>I made this little corner of the world for you. A place filled with our memories, little reminders, and all the things I wish I could tell you whenever you need a little extra happiness.</p>
+          <p class="signature">with love, <span data-signature>renren</span> ♡</p>
+          <div class="button-row"><a class="button button-primary" href="#comfort">A little message for you</a><a class="button button-soft" href="#gallery">Let's look at our memories</a></div>
+        </div>
+        <figure class="hero-photo polaroid reveal">
+          <div class="photo-wrap"><img src="public/images/cover.jpg" alt="A favorite photo of us together" data-fallback="cover" class="replaceable-image"></div>
+          <figcaption>my favorite kind of place is anywhere with you ♡</figcaption>
+          <span class="tape" aria-hidden="true"></span>
+        </figure>
+        <div class="hero-doodle" aria-hidden="true">♡</div>
+      </section>
+
+      <section class="intro-strip">
+        <p>for the good days, the difficult days, and all the ordinary days in between.</p>
+      </section>
+
+      <section class="comfort section-pad" id="comfort">
+        <div class="section-heading reveal"><p class="eyebrow">little reminders from me to you</p><h2>when you need a little <em>comfort</em> ♡</h2><p>Inspired by the feeling of “Count on Me”—with words of our own, just for you.</p></div>
+        <div id="comfortSections" class="comfort-list"></div>
+      </section>
+
+      <section class="appreciation section-pad" id="appreciation">
+        <div class="section-heading reveal"><p class="eyebrow">a collection of tiny truths</p><h2>little things i cherish <em>about you</em></h2><p>Open these whenever you need a reminder that you matter.</p></div>
+        <button class="button button-primary" id="toggleAppreciation" aria-expanded="false" aria-controls="appreciationGrid">Remind me of the little things ♡</button>
+        <div class="appreciation-grid" id="appreciationGrid" hidden></div>
+        <p class="edit-hint">These cards are easy to personalize in <code>data.js</code>.</p>
+      </section>
+
+      <section class="gallery-section section-pad" id="gallery">
+        <div class="section-heading reveal"><p class="eyebrow">little pieces of our story</p><h2>our memories, <em>kept close</em> ♡</h2><p>Tap any picture to see it a little bigger.</p></div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </section>
+
+      <section class="timeline-section section-pad" id="timeline">
+        <div class="section-heading reveal"><p class="eyebrow">the moments that stay</p><h2>little moments, <em>big memories</em> ♡</h2><p>Sample entries for now—replace them with your real memories whenever you're ready.</p></div>
+        <div class="timeline" id="timelineGrid"></div>
+      </section>
+
+      <section class="letter-section section-pad" id="letter">
+        <div class="section-heading reveal"><p class="eyebrow">something to keep</p><h2>a letter i want you to <em>keep</em> ♡</h2><p>A little letter for whenever you need a softer moment.</p></div>
+        <button class="letter-envelope" id="letterOpen" aria-expanded="false" aria-controls="letterPaper">
+          <span class="letter-envelope-top" aria-hidden="true"></span><span class="letter-seal" aria-hidden="true">♡</span>
+          <span class="letter-envelope-label">open when you need a little love</span>
+        </button>
+        <article class="letter-paper" id="letterPaper" hidden>
+          <button class="letter-close" id="letterClose" aria-label="Close letter">×</button>
+          <div id="letterText"></div>
+        </article>
+      </section>
+
+      <section class="final-section section-pad" id="final">
+        <div class="final-card reveal">
+          <p class="eyebrow">before you go</p><div class="final-heart" aria-hidden="true">♡</div>
+          <h2>one little question, <em>love</em> ♡</h2>
+          <p>did this little corner of the internet make you smile, even just a little?</p>
+          <div class="button-row center"><button class="button button-primary" data-final="smile">yes, it made me smile ♡</button><button class="button button-soft" data-final="emotional">you made me emotional 🥹</button></div>
+          <div id="finalResponse" class="final-response" role="status" aria-live="polite" hidden></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>made with love, for you ♡</p><p class="signature">— <span data-signature>renren</span></p>
+      <p class="footer-small">you can revisit this little corner whenever you need a reminder.</p>
+      <a href="#hero" class="back-top">back to the beginning ↑</a>
+    </footer>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close photo viewer">×</button>
+    <button class="lightbox-arrow prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+    <figure><img id="lightboxImage" alt=""><figcaption id="lightboxCaption"></figcaption></figure>
+    <button class="lightbox-arrow next" id="lightboxNext" aria-label="Next photo">›</button>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
